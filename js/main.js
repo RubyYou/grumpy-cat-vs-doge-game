@@ -46,6 +46,7 @@ function animate(config) {
 	if(config !== false){
 		requestAnimationFrame(animate);
 		Global.renderer.render(Global.stage);
+		//console.log('update');
 	}
 
 }

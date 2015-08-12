@@ -3,7 +3,8 @@ function EndScreen(){
 	this.init = function(){
 		
 		var result;
-		var lostTest, winnerText, winnerAnnounceText, moneyAnnounceText;
+		var lostTest, winnerText, winnerAnnounceText, moneyAnnounceText, winnerVideo;
+		
 		if( Global.betTargetName == Global.winner ){
 			result = "win";
 		}else{
@@ -22,7 +23,7 @@ function EndScreen(){
 				Utility.assignProperties(Global.againstTarget, 0.5, Global.renderer.view.width/2+200, 320, 1, 1);
 				winnerAnnounceText = Utility.renderText('Winner is ' + Global.winner + "!!!!", H1, 0, 100, 80, 5);
 				moneyAnnounceText = Utility.renderText('You win ' + Global.BetMoney  + " pounds!", H1, 0, 100, 120, 5);
-
+				winnerVideo = Utility.renderVideo('assets/'+Global.betTargetName+".mp4", 50, 50, 500, 500, 10);
 			break;
 			
 			case "lose":
@@ -33,12 +34,13 @@ function EndScreen(){
 				Utility.assignProperties(Global.betTarget, 0.5, Global.renderer.view.width/2+200, 320, 1, 1);
 				winnerAnnounceText = Utility.renderText('Winner is ' + Global.winner + "!!!!", H1, 0, 100, 80, 5);
 				moneyAnnounceText = Utility.renderText('You lose ' + Global.BetMoney  + " pounds!", H1, 0, 100, 120, 5);
-
-
+				winnerVideo = Utility.renderVideo('assets/'+Global.againstTargetName+".mp4", 50, 50, 500, 500, 10);
 			break;
 		};
+		console.log(winnerVideo);
+		//console.log(winnerVideo._texture.baseTexture.source.innerHtml);
 
-		Utility.addChildToStage([lostTest, winnerText, winnerAnnounceText, moneyAnnounceText]);
+		Utility.addChildToStage([winnerVideo, lostTest, winnerText, winnerAnnounceText, moneyAnnounceText]);
 
 	};
 

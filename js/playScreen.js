@@ -52,7 +52,7 @@ function PlayScreen(){
 		betText = Utility.renderText(Global.betTargetName + Global.BetMoney + 'pounds', H1, 0, 200, 500, 5);
 
 		// do a copy to to place in Bottom
-		if(Global.betTargetName == "Grumpy cat"){
+		if(Global.betTargetName == "GrumpyCat"){
 			betTargetImgCopy = Utility.renderImage('assets/cat.png', 0.5, 100, 500, 1);
 		}else{
 			betTargetImgCopy = Utility.renderImage('assets/doge.png', 0.5, 100, 500, 1);
@@ -119,7 +119,7 @@ function PlayScreen(){
 		        values: path,
 		        autoRotate: false,
 		    }, 
-		    delay:2,
+		    delay:1,
 		    ease: Linear.easeNone
 		});
 
@@ -130,7 +130,7 @@ function PlayScreen(){
 		        values: path2,
 		        autoRotate: false,
 		    }, 
-		    delay:2,
+		    delay:1,
 		    ease: Linear.easeNone
 		});
 
@@ -165,7 +165,7 @@ function PlayScreen(){
 			winner();
 		}
 		
-		console.log(rank);
+		//console.log(rank);
 	};
 
 	var winner = function(){

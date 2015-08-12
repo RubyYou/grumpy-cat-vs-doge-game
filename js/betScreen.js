@@ -18,7 +18,7 @@ function BetScreen(){
 		
 		catBetBtn.betItem = Global.grumpyCat;
 		dogeBetBtn.betItem = Global.doge;
-		catBetBtn.betItemName = "Grumpy cat";
+		catBetBtn.betItemName = "GrumpyCat";
 		dogeBetBtn.betItemName = "Doge";
 
 		catBetBtn.on('mousedown', this.playScreenHandler);
@@ -33,7 +33,7 @@ function BetScreen(){
 		Global.betTarget = this.betItem;
 		Global.betTargetName = this.betItemName;
 
-		if(Global.betTargetName == "Grumpy cat"){
+		if(Global.betTargetName == "GrumpyCat"){
 			Global.againstTarget = dogeBetBtn.betItem;
 			Global.againstTargetName = dogeBetBtn.betItemName;
 		}else{
