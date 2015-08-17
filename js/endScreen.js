@@ -3,7 +3,7 @@ function EndScreen(){
 	this.init = function(){
 		
 		var result;
-		var lostTest, winnerText, winnerAnnounceText, moneyAnnounceText, winnerVideoTexture, winnerVideo;
+		var winnerAnnounceText, moneyAnnounceText, winnerVideo;
 		
 		if( Global.betTargetName == Global.winner ){
 			result = "win";

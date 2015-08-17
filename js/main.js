@@ -19,7 +19,7 @@ var STATE_PLAYSCREEN = "State.PlayScreen";
 var STATE_ENDSCREEN = "State.EndScreen";
 
 var changeState = function(state) {
-	console.log("change state: "+state);
+	//console.log("change state: "+state);
     
     switch (state) {
         case "State.BetScreen":

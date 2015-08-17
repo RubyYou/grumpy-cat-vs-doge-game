@@ -136,10 +136,8 @@ function PlayScreen(){
 
 		totalTime = betTargetTween.totalDuration();
 		againstTime = againstTargetTween.totalDuration();
-		//console.log( totalTime + "/" + againstTime);
 
 		bgmusic = new Audio("assets/James_Bond_007_Movie_Theme_Music.mp3");
-
 		bgmusic.addEventListener('ended', function() {
 		    this.currentTime = 0;
 		    this.play();
@@ -157,11 +155,9 @@ function PlayScreen(){
 
 			againstTime = againstTime - (Utility.getRandomInt(0,50)*0.09);
 			againstTargetTween.totalDuration(againstTime);
-			//console.log("againstTime:"+againstTime);
 
 			Global.BetMoney ++;
 			betText.text = Global.betTargetName + " " + Global.BetMoney + 'pounds';
-			//console.log(Global.BetMoney);
 		}
 
 	};// this.speedUp
