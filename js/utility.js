@@ -28,11 +28,9 @@ Utility.renderImage = function(TextureUrl, anchor, positionX, positionY, depth){
 	return object;
 }
 
-Utility.renderVideo = function(TextureUrl, positionX, positionY, width, height, depth){
+Utility.renderVideo = function(TextureUrl, width, height, depth){
 	var objectTexture = PIXI.Texture.fromVideo(TextureUrl);
 	var object = new PIXI.Sprite(objectTexture);
-	object.position.x = positionX;
-	object.position.y = positionY;
 	object.width = width;
 	object.height = height;
 	object.zIndex = depth;

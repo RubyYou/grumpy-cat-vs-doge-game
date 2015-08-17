@@ -42,7 +42,7 @@ function PlayScreen(){
 	var bg;
 	var speedUpBtn;
 	var betTargetImgCopy;
-
+	var bgmusic;
 
 	this.init = function(){
 		var self = this;
@@ -138,6 +138,14 @@ function PlayScreen(){
 		againstTime = againstTargetTween.totalDuration();
 		//console.log( totalTime + "/" + againstTime);
 
+		bgmusic = new Audio("assets/James_Bond_007_Movie_Theme_Music.mp3");
+
+		bgmusic.addEventListener('ended', function() {
+		    this.currentTime = 0;
+		    this.play();
+		}, false);
+
+		bgmusic.play();
 	};// this run
 
 	this.speedUp = function(){
@@ -162,6 +170,8 @@ function PlayScreen(){
 		rank.push(name);
 		
 		if(rank.length>1){
+			bgmusic.pause();
+			bgmusic.currentTime = 0;
 			winner();
 		}
 		
